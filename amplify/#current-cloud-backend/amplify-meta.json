@@ -10,6 +10,11 @@
 			"StackName": "amplify-blue-health-view-dev-204707",
 			"StackId": "arn:aws:cloudformation:us-east-1:144504656881:stack/amplify-blue-health-view-dev-204707/34a3e710-715f-11ea-bab5-0a3bc12b2732",
 			"AmplifyAppId": "d2hu6zuqjn9j6q"
+		},
+		"categories": {
+			"auth": {
+				"bluehealthviewc68da31a": {}
+			}
 		}
 	},
 	"auth": {
@@ -18,11 +23,6 @@
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],
 			"customAuth": false,
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/amplify-blue-health-view-dev-204707-deployment/amplify-cfn-templates/auth/bluehealthviewc68da31a-cloudformation-template.yml",
-				"logicalId": "authbluehealthviewc68da31a"
-			},
-			"lastPushTimeStamp": "2020-03-29T02:47:34.808Z",
 			"output": {
 				"AppClientSecret": "110rrsoham2evprpforojqnjkm1ss7l88hiqi6qh05boh9lqjcah",
 				"UserPoolId": "us-east-1_DtgFGBTZv",
@@ -32,7 +32,11 @@
 				"IdentityPoolName": "bluehealthviewc68da31a_identitypool_c68da31a__dev",
 				"UserPoolName": "bluehealthviewc68da31a_userpool_c68da31a"
 			},
-			"lastPushDirHash": "e2ZdStxekDm9KKbXcsCjqUly47c="
+			"lastPushTimeStamp": "2020-03-29T22:13:57.325Z",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-blue-health-view-dev-204707-deployment/amplify-cfn-templates/auth/bluehealthviewc68da31a-cloudformation-template.yml",
+				"logicalId": "authbluehealthviewc68da31a"
+			}
 		}
 	},
 	"api": {
@@ -52,12 +56,12 @@
 				"GraphQLAPIIdOutput": "kofbyxpqpvezvdvqikfexa47ca",
 				"GraphQLAPIEndpointOutput": "https://vcn6luv4gzedxbmrferkhn5fgq.appsync-api.us-east-1.amazonaws.com/graphql"
 			},
+			"lastPushTimeStamp": "2020-03-29T22:13:57.328Z",
 			"providerMetadata": {
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-blue-health-view-dev-204707-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apibhvdata"
 			},
-			"lastPushTimeStamp": "2020-03-29T02:47:37.524Z",
-			"lastPushDirHash": "GYSj8CBEbJk2u6nvYScX7uqMJpA="
+			"lastPushDirHash": "SWLTV9ZXk7TdLSjqXCZ5GiQNB/c="
 		}
 	}
 }

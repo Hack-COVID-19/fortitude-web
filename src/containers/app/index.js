@@ -1,4 +1,8 @@
 import React, { useEffect, Fragment } from 'react'
+import { API, graphqlOperation } from 'aws-amplify'
+import { createTodo } from '../../graphql/mutations'
+import { listTodos } from '../../graphql/queries'
+import { withAuthenticator } from 'aws-amplify-react'
 import { Route } from 'react-router-dom'
 import Home from '../home'
 import Stocks from '../stocks'
@@ -35,6 +39,7 @@ const App = props => {
     <Container text style={{ marginTop: '7em' }}>
       <Route exact path="/" component={Home} />
       <Route exact path="/home" component={Home} />
+      <Route exact path="/login" component={Home} />
       <Route path="/stocks/:stockId" component={Stocks} />
     </Container>
 
@@ -119,7 +124,7 @@ const mapDispatchToProps = dispatch =>
     dispatch
   )
 
-export default connect(
+export default withAuthenticator(connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(App))

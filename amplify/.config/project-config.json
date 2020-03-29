@@ -1,14 +1,14 @@
 {
-    "projectName": "Blue-Health-View",
+    "projectName": "fortitude-web",
     "version": "3.0",
     "frontend": "javascript",
     "javascript": {
-        "framework": "angular",
+        "framework": "react",
         "config": {
             "SourceDir": "src",
-            "DistributionDir": "dist",
-            "BuildCommand": "npm run-script build",
-            "StartCommand": "ng serve"
+            "DistributionDir": "build",
+            "BuildCommand": "npm.cmd run-script build",
+            "StartCommand": "npm.cmd run-script start"
         }
     },
     "providers": [

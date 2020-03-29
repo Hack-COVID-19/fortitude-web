@@ -7,11 +7,12 @@ import App from './containers/app'
 
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
-Amplify.configure(awsExports);
 
 import 'sanitize.css/sanitize.css'
 import 'semantic-ui-css/semantic.min.css'
 import './index.css'
+
+Amplify.configure(awsExports);
 
 const target = document.querySelector('#root')
 

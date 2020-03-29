@@ -32,7 +32,7 @@
                 "IdentityPoolName": "bluehealthviewc68da31a_identitypool_c68da31a__dev",
                 "UserPoolName": "bluehealthviewc68da31a_userpool_c68da31a"
             },
-            "lastPushTimeStamp": "2020-03-29T22:10:45.792Z",
+            "lastPushTimeStamp": "2020-03-29T22:17:24.684Z",
             "providerMetadata": {
                 "s3TemplateURL": "https://s3.amazonaws.com/amplify-blue-health-view-dev-204707-deployment/amplify-cfn-templates/auth/bluehealthviewc68da31a-cloudformation-template.yml",
                 "logicalId": "authbluehealthviewc68da31a"
@@ -56,7 +56,7 @@
                 "GraphQLAPIIdOutput": "kofbyxpqpvezvdvqikfexa47ca",
                 "GraphQLAPIEndpointOutput": "https://vcn6luv4gzedxbmrferkhn5fgq.appsync-api.us-east-1.amazonaws.com/graphql"
             },
-            "lastPushTimeStamp": "2020-03-29T22:10:55.236Z",
+            "lastPushTimeStamp": "2020-03-29T22:17:24.685Z",
             "providerMetadata": {
                 "s3TemplateURL": "https://s3.amazonaws.com/amplify-blue-health-view-dev-204707-deployment/amplify-cfn-templates/api/cloudformation-template.json",
                 "logicalId": "apibhvdata"
