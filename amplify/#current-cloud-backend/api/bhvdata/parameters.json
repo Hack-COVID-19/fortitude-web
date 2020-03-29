@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "bhvdata",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authbluehealthviewc68da31a",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

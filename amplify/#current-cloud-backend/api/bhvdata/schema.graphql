@@ -1,0 +1,20 @@
+type Account @model {
+  id: ID!
+  name: String!
+  patients: [Patient] @connection(keyName: "byAccount", fields: ["id"])
+}
+
+type Patient @model @key(name: "byAccount", fields: ["accountID"]) {
+  id: ID!
+  title: String!
+  accountID: ID!
+  account: Account @connection(fields: ["accountID"])
+  comments: [Appointment] @connection(keyName: "byPatient", fields: ["id"])
+}
+
+type Appointment @model @key(name: "byPatient", fields: ["patientID", "notes"]) {
+  id: ID!
+  patientID: ID!
+  patient: Patient @connection(fields: ["patientID"])
+  notes: String!
+}

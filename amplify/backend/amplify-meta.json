@@ -1,0 +1,66 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-blue-health-view-dev-204707-authRole",
+            "UnauthRoleArn": "arn:aws:iam::144504656881:role/amplify-blue-health-view-dev-204707-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::144504656881:role/amplify-blue-health-view-dev-204707-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-blue-health-view-dev-204707-deployment",
+            "UnauthRoleName": "amplify-blue-health-view-dev-204707-unauthRole",
+            "StackName": "amplify-blue-health-view-dev-204707",
+            "StackId": "arn:aws:cloudformation:us-east-1:144504656881:stack/amplify-blue-health-view-dev-204707/34a3e710-715f-11ea-bab5-0a3bc12b2732",
+            "AmplifyAppId": "d2hu6zuqjn9j6q"
+        },
+        "categories": {
+            "auth": {
+                "bluehealthviewc68da31a": {}
+            }
+        }
+    },
+    "auth": {
+        "bluehealthviewc68da31a": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [],
+            "customAuth": false,
+            "output": {
+                "AppClientSecret": "110rrsoham2evprpforojqnjkm1ss7l88hiqi6qh05boh9lqjcah",
+                "UserPoolId": "us-east-1_DtgFGBTZv",
+                "AppClientIDWeb": "6k7hcest2lu5m9a2ebh6c0qug9",
+                "AppClientID": "kdmqq7g3je0omd6fhl9tcp1g8",
+                "IdentityPoolId": "us-east-1:256780f8-96f2-4f88-a811-a4b4bc3c1a26",
+                "IdentityPoolName": "bluehealthviewc68da31a_identitypool_c68da31a__dev",
+                "UserPoolName": "bluehealthviewc68da31a_userpool_c68da31a"
+            },
+            "lastPushTimeStamp": "2020-03-29T22:10:45.792Z",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-blue-health-view-dev-204707-deployment/amplify-cfn-templates/auth/bluehealthviewc68da31a-cloudformation-template.yml",
+                "logicalId": "authbluehealthviewc68da31a"
+            }
+        }
+    },
+    "api": {
+        "bhvdata": {
+            "service": "AppSync",
+            "providerPlugin": "awscloudformation",
+            "output": {
+                "authConfig": {
+                    "additionalAuthenticationProviders": [],
+                    "defaultAuthentication": {
+                        "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+                        "userPoolConfig": {
+                            "userPoolId": "authbluehealthviewc68da31a"
+                        }
+                    }
+                },
+                "GraphQLAPIIdOutput": "kofbyxpqpvezvdvqikfexa47ca",
+                "GraphQLAPIEndpointOutput": "https://vcn6luv4gzedxbmrferkhn5fgq.appsync-api.us-east-1.amazonaws.com/graphql"
+            },
+            "lastPushTimeStamp": "2020-03-29T22:10:55.236Z",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-blue-health-view-dev-204707-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+                "logicalId": "apibhvdata"
+            }
+        }
+    }
+}
