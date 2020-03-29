@@ -29,11 +29,11 @@ const App = props => {
       <Container>
         <Menu.Item as='a' header onClick={() => props.goHome()}>
           <Image size='mini' src='/logo192.png' style={{ marginRight: '1.5em' }} />
-          Stock Info App
+          Fortitude Health
         </Menu.Item>
-        <Menu.Item>
+        {/* <Menu.Item>
           <StockSearch stocks={stocks}></StockSearch>
-        </Menu.Item>
+        </Menu.Item> */}
       </Container>
     </Menu>
     <Container text style={{ marginTop: '7em' }}>
