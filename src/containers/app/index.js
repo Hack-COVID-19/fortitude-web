@@ -6,6 +6,7 @@ import { withAuthenticator } from 'aws-amplify-react'
 import { Route } from 'react-router-dom'
 import Home from '../home'
 import Calendly from '../calendly'
+import Patient from '../patient'
 import Onboard from '../onboard'
 import Appointments from '../appointments'
 import Appointment from '../appointment';
@@ -48,6 +49,7 @@ const App = props => {
       <Route exact path="/calendly" component={Calendly} />
       <Route exact path="/onboard" component={Onboard} />
       <Route exact path="/appointments" component={Appointments} />
+      <Route exact path="/patient" component={Patient} />
       <Route exact path="/login" component={Home} />
       <Route exact path="/appointment/:id" component={Appointment} />
       <Route path="/appointmentfeedback/:id" component={AppointmentFeedback} />
