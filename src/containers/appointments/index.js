@@ -7,7 +7,7 @@ import {
 } from '../../modules/iexCloud'
 import { Grid, Header, Container, Icon, Label, Item, Segment, TextArea } from 'semantic-ui-react'
 
-const Appointments = props => (
+const Appointment = props => (
   <div className="fill body">
     <Container>
       <Header>Patient</Header>
@@ -55,4 +55,4 @@ const mapDispatchToProps = dispatch =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Appointments)
+)(Appointment)
