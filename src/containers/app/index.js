@@ -7,7 +7,9 @@ import { Route } from 'react-router-dom'
 import Home from '../home'
 import Calendly from '../calendly'
 import Onboard from '../onboard'
-import Appointments from '../appointmentsz'
+import Appointments from '../appointments'
+import Appointment from '../appointment';
+import AppointmentFeedback from '../appointmentfeedback';
 import Stocks from '../stocks'
 import { Container, Divider, Grid, Header, Image, List, Menu, Segment } from 'semantic-ui-react'
 import StockSearch from './search'
@@ -17,8 +19,6 @@ import { push } from 'connected-react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { getMarketData } from '../../modules/iexCloud'
-import Appointment from '../appointments';
-import AppointmentFeedback from '../appointmentfeedback';
 
 const stocks = _.map(companies.default, (company) => { return {title: company.Symbol, description: company.Name}})
 
@@ -49,8 +49,8 @@ const App = props => {
       <Route exact path="/onboard" component={Onboard} />
       <Route exact path="/appointments" component={Appointments} />
       <Route exact path="/login" component={Home} />
-      <Route exact path="/appointments/:id" component={Appointment} />
-      <Route exact path="/appointmentfeedback/:id" component={AppointmentFeedback} />
+      <Route exact path="/appointment/:id" component={Appointment} />
+      <Route path="/appointmentfeedback/:id" component={AppointmentFeedback} />
       <Route path="/stocks/:stockId" component={Stocks} />
     </Container>
 
