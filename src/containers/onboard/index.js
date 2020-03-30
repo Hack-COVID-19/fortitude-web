@@ -46,6 +46,9 @@ const Onboard = props => (
           <Grid.Column floated='left'>
             <Button onClick={props.goBack}>Back</Button>
           </Grid.Column>
+          <Grid.Column floated='right'>
+            <Button onClick={props.changePage}>Appointmnts</Button>
+          </Grid.Column>
         </Grid.Row>
       </Grid>
   </div>
@@ -58,7 +61,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
-      changePage: () => push('/'),
+      changePage: () => push('/appointments'),
       goBack: () => push('/calendly')
     },
     dispatch
