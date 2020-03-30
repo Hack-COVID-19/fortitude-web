@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import {
   setData
 } from '../../modules/iexCloud'
-import { Grid, Header, Container, Button, Segment, TextArea, Card, Image } from 'semantic-ui-react'
+import { Grid, Header, Container, Button, Segment, TextArea, Card, Image, Modal, Icon } from 'semantic-ui-react'
 
 const Appointment = props => (
   <div>
@@ -46,7 +46,22 @@ const Appointment = props => (
           <Button onClick={props.goBack}>Back</Button>
         </Grid.Column>
         <Grid.Column floated='right'>
-          <Button onClick={props.goBack}>Save</Button>
+          <Modal trigger={<Button>Save</Button>} basic size='small'>
+            <Header icon='comment alternate outline' content='Send Patient Summary' />
+            <Modal.Content>
+              <p>
+                Would you like to send a text message summary of this appointment to the patient?
+              </p>
+            </Modal.Content>
+            <Modal.Actions>
+              <Button basic color='red' inverted onClick={props.goBack}>
+                <Icon name='remove' /> No
+              </Button>
+              <Button color='green' inverted onClick={props.goBack}>
+                <Icon name='checkmark' /> Yes
+              </Button>
+            </Modal.Actions>
+          </Modal>
         </Grid.Column>
       </Grid.Row>
     </Grid>
@@ -60,7 +75,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
-      changePage: () => push('/about-us'),
+      changePage: () => push('/'),
       goBack: () => push('/appointments')
     },
     dispatch
