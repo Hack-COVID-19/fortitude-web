@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import {
   setData
 } from '../../modules/iexCloud'
-import { Grid, Header, Container, Icon, Label, Segment } from 'semantic-ui-react'
+import { Grid, Container, Segment } from 'semantic-ui-react'
 
 const AppointmentFeedback = props => (
   <div>
@@ -22,7 +22,7 @@ const AppointmentFeedback = props => (
                 Use once during the morning and once at night as everyday until completed.
                 <br /> 
                 <br />
-                Do not drink while using Tamiflu.
+                Do not drink alcohol while using Tamiflu.
             </Grid.Column>
           </Grid>
         </Segment>
