@@ -12,14 +12,14 @@ const Calendly = props => (
     <h1>Calendly</h1>
     <h4>We use Calendly for appointment coordination.</h4>
     <p>
-      Create and account with Calendly to manage your schedule. Set it up with Zoom or Google Meet so that each meeting will be created with a video call so patients are able to recieve assistance remotely and continue social distancing.
+      Create an account with Calendly for scheduling virtual appointments with patients. 
     </p>
-    <a target="_blank" href='https://calendly.com/'>https://calendly.com/</a>
+    <p>
+      Set up a new meeting type, and add Zoom or Google Meet so that each meeting will be created with a video call so patients are able to recieve assistance remotely and continue praticing social distancing.
+    </p>
+    <span>👉 <a target="_blank" href='https://calendly.com/'>https://calendly.com/</a></span>
     
     <div className="fill body">
-      <Header as='h2' inverted textAlign='center'>
-        Floated
-      </Header>
       <Grid>
         <Grid.Row columns={4}>
           <Grid.Column floated='left'>

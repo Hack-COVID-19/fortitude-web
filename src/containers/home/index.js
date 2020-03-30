@@ -23,13 +23,13 @@ const Home = props => (
             <Message.Item>HIPAA Compliant</Message.Item>
           </Message.List>
       </Message>
-      <Header as='h2' inverted textAlign='center'>
-        Floated
+      <Header as='h2' textAlign='center'>
+        Ready to get started?
       </Header>
       <Grid>
         <Grid.Row columns={4}>
           <Grid.Column floated='right'>
-            <Button onClick={props.changePage}>Get Started</Button>
+            <Button onClick={props.changePage}>Create Schedule</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
