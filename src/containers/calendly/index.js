@@ -10,16 +10,18 @@ import { Header, Grid, Button } from 'semantic-ui-react'
 const Calendly = props => (
   <div>
     <h1>Calendly</h1>
+
     <h4>We use Calendly for appointment coordination.</h4>
-    <p>
-      Create an account with Calendly for scheduling virtual appointments with patients. 
-    </p>
-    <p>
-      Set up a new meeting type, and add Zoom or Google Meet so that each meeting will be created with a video call so patients are able to recieve assistance remotely and continue praticing social distancing.
-    </p>
-    <span>👉 <a target="_blank" href='https://calendly.com/'>https://calendly.com/</a></span>
-    
     <div className="fill body">
+      <p>
+        Create an account with Calendly for scheduling virtual appointments with patients. 
+      </p>
+      <p>
+        Set up a new meeting type, and add Zoom or Google Meet so that each meeting will be created with a video call so patients are able to recieve assistance remotely and continue praticing social distancing.
+      </p>
+      <span>👉 <a target="_blank" href='https://calendly.com/'>https://calendly.com/</a></span>
+    
+      </div>
       <Grid>
         <Grid.Row columns={4}>
           <Grid.Column floated='left'>
@@ -30,7 +32,6 @@ const Calendly = props => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </div>
   </div>
 )
 

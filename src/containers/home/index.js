@@ -26,6 +26,7 @@ const Home = props => (
       <Header as='h2' textAlign='center'>
         Ready to get started?
       </Header>
+    </div>
       <Grid>
         <Grid.Row columns={4}>
           <Grid.Column floated='right'>
@@ -33,7 +34,6 @@ const Home = props => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </div>
   </div>
 )
 
