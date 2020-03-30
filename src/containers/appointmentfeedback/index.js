@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import {
   setData
 } from '../../modules/iexCloud'
-import { Grid, Container, Segment } from 'semantic-ui-react'
+import { Grid, Container, Segment, Button } from 'semantic-ui-react'
 
 const AppointmentFeedback = props => (
   <div>
@@ -28,6 +28,16 @@ const AppointmentFeedback = props => (
         </Segment>
       </Container>
     </div>
+      <Grid>
+        <Grid.Row columns={4}>
+          <Grid.Column floated='left'>
+            <Button onClick={props.goBack}>Back</Button>
+          </Grid.Column>
+          <Grid.Column floated='right'>
+            <Button onClick={props.addAppt}>Create Appt</Button>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
   </div>
 )
 
@@ -38,7 +48,8 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
-      changePage: () => push('/about-us')
+      goBack: () => push('/'),
+      addAppt: () => push('/patient')
     },
     dispatch
   )

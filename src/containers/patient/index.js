@@ -78,7 +78,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
-      goBack: () => push('/')
+      goBack: () => push('/appointmentfeedback/1')
     },
     dispatch
   )

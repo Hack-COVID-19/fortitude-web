@@ -29,6 +29,9 @@ const Home = props => (
     </div>
       <Grid>
         <Grid.Row columns={4}>
+          <Grid.Column floated='left'>
+            <Button onClick={props.lastApptView}>Patient View</Button>
+          </Grid.Column>
           <Grid.Column floated='right'>
             <Button onClick={props.changePage}>Set Schedule</Button>
           </Grid.Column>
@@ -44,6 +47,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
+      lastApptView: () => push('/appointmentfeedback/1'),
       changePage: () => push('/calendly')
     },
     dispatch
