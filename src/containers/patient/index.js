@@ -15,7 +15,7 @@ const Patient = props => (
     <h4>Schedule and view recent appointments.</h4>
     <div className="fill">
 
-      <iframe width='100%' height='90%' src="https://master.d2hu6zuqjn9j6q.amplifyapp.com/"></iframe>
+      <iframe width='100%' height='90%' src="https://master.d2hu6zuqjn9j6q.amplifyapp.com/patients"></iframe>
       {/* <p>
         Create an account with Calendly for scheduling virtual appointments with patients. 
       </p>
