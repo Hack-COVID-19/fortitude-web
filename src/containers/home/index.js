@@ -29,7 +29,7 @@ const Home = props => (
       <Grid>
         <Grid.Row columns={4}>
           <Grid.Column floated='right'>
-            <Button onClick={props.changePage}>Create Schedule</Button>
+            <Button onClick={props.changePage}>Set Schedule</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>

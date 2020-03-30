@@ -7,26 +7,22 @@ import {
 } from '../../modules/iexCloud'
 import { Header, Grid, Button } from 'semantic-ui-react'
 
-const Calendly = props => (
+const Onboard = props => (
   <div>
-    <h1>Calendly</h1>
-    <h4>We use Calendly for appointment coordination.</h4>
+    <h1>Onboarding</h1>
+    <h4>Use the form below to add a new patient.</h4>
     <p>
-      Create an account with Calendly for scheduling virtual appointments with patients. 
+      If a patient is no longer able to recieve housecare treatment because of COVID-19 restrictions, you can ask them if they would like to continue recieving treatment remotely.
     </p>
     <p>
-      Set up a new meeting type, and add Zoom or Google Meet so that each meeting will be created with a video call so patients are able to recieve assistance remotely and continue praticing social distancing.
+      If so, add thir name and phone number to the form below.
     </p>
-    <span>👉 <a target="_blank" href='https://calendly.com/'>https://calendly.com/</a></span>
     
     <div className="fill body">
       <Grid>
         <Grid.Row columns={4}>
           <Grid.Column floated='left'>
             <Button onClick={props.goBack}>Back</Button>
-          </Grid.Column>
-          <Grid.Column floated='right'>
-            <Button onClick={props.changePage}>Add Patient</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -41,8 +37,8 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
-      changePage: () => push('/onboard'),
-      goBack: () => push('/')
+      changePage: () => push('/'),
+      goBack: () => push('/calendly')
     },
     dispatch
   )
@@ -50,4 +46,4 @@ const mapDispatchToProps = dispatch =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Calendly)
+)(Onboard)
