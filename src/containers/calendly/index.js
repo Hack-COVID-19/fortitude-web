@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import {
   setData
 } from '../../modules/iexCloud'
-import { Header, Grid, Button } from 'semantic-ui-react'
+import { Grid, Button } from 'semantic-ui-react'
 
 const Calendly = props => (
   <div>
