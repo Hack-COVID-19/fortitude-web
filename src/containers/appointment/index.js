@@ -5,39 +5,52 @@ import { connect } from 'react-redux'
 import {
   setData
 } from '../../modules/iexCloud'
-import { Grid, Header, Container, Icon, Label, Item, Segment, TextArea } from 'semantic-ui-react'
+import { Grid, Header, Container, Button, Segment, TextArea, Card, Image } from 'semantic-ui-react'
 
 const Appointment = props => (
-  <div className="fill body">
-    <Container>
-      <Header>Patient</Header>
-      <Grid>
-        <Grid.Column width={4}>
-          <Icon name="user circle" size='massive'/>
-          <br />
-          <br />
-          <Label>Elliot Baker</Label>
+  <div>
+    <h1>Appointment Notes</h1>
+    <h4>Enter notes and prescribed medication here.</h4>
+    <div className="fill body">
+      <Card.Group>
+        <Card>
+          <Card.Content>
+            <Image
+              floated='right'
+              size='mini'
+              src='/rachel.png'
+            />
+            <Card.Header>Rachel</Card.Header>
+            <Card.Meta>Female, 78</Card.Meta>
+          </Card.Content>
+        </Card>
+        <Card>
+          <Card.Content>
+            <Card.Header>Date Seen</Card.Header>
+            <Card.Meta>April 1st, 2020</Card.Meta>
+          </Card.Content>
+        </Card>
+      </Card.Group>
+      <br />
+      <Container>
+        <Segment>
+          <Header>Notes for Patient</Header>
+          <TextArea style={{ minHeight: 100, width: 650 }} />
+        </Segment>
+      </Container>
+    </div>
+    
+    <Grid>
+      <Grid.Row columns={6}>
+        <Grid.Column floated='left'>
+          <Button onClick={props.goBack}>Back</Button>
         </Grid.Column>
-        <Grid.Column width={10}>
-          <Item.Content>
-            <Item.Header>Details</Item.Header>
-            <Item.Meta>
-              <p>Age: 70 years</p>
-              <p>DOB: 21st March, 1950</p>
-              <p>Address: 123 Main street, San Francisco, CA - 90001</p>
-            </Item.Meta>
-            <Item.Description>
-              Pre existing conditions
-            </Item.Description>
-          </Item.Content>
+        <Grid.Column floated='right'>
+          <Button onClick={props.goBack}>Save</Button>
         </Grid.Column>
-      </Grid>
-      <Segment>
-        <Header>Prescription</Header>
-        <TextArea style={{ minHeight: 100, width: 650 }} />
-      </Segment>
-    </Container>
-  </div>
+      </Grid.Row>
+    </Grid>
+  </div>  
 )
 
 const mapStateToProps = () => ({
@@ -47,7 +60,8 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
-      changePage: () => push('/about-us')
+      changePage: () => push('/about-us'),
+      goBack: () => push('/appointments')
     },
     dispatch
   )

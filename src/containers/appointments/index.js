@@ -18,7 +18,7 @@ const Appointments = props => (
       <List.Item>
         <Image avatar src='/rachel.png' />
         <List.Content>
-          <List.Header as='a'>Rachel</List.Header>
+          <List.Header as='a' onClick={() => props.goToAppt('Rachel')}>Rachel</List.Header>
           <List.Description>
             Last prescribed {' '}
             <a>
@@ -31,14 +31,14 @@ const Appointments = props => (
       <List.Item>
         <Image avatar src='/veronika.jpg' />
         <List.Content>
-          <List.Header as='a'>Veronika</List.Header>
+          <List.Header as='a' onClick={() => props.goToAppt('Veronika')}>Veronika</List.Header>
           <List.Description>Was prescribed nothing 2 hours ago.</List.Description>
         </List.Content>
       </List.Item>
       <List.Item>
         <Image avatar src='/lindsay.png' />
         <List.Content>
-          <List.Header as='a'>Lindsay</List.Header>
+          <List.Header as='a' onClick={() => props.goToAppt('Lindsay')}>Lindsay</List.Header>
           <List.Description>
             Last prescribed{' '}
             <a>
@@ -51,7 +51,7 @@ const Appointments = props => (
       <List.Item>
         <Image avatar src='/matthew.png' />
         <List.Content>
-          <List.Header as='a'>Matthew</List.Header>
+          <List.Header as='a' onClick={() => props.goToAppt('Matthew')}>Matthew</List.Header>
           <List.Description>
             Last prescribed{' '}
             <a>
@@ -64,7 +64,7 @@ const Appointments = props => (
       <List.Item>
         <Image avatar src='/jenny.jpg' />
         <List.Content>
-          <List.Header as='a'>Jenny</List.Header>
+          <List.Header as='a' onClick={() => props.goToAppt('Jenny')}>Jenny</List.Header>
           <List.Description>
             Last prescribed{' '}
             <a>
@@ -94,6 +94,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
+      goToAppt: (id) => push(`/appointment/${id}`),
       changePage: () => push('/'),
       goBack: () => push('/onboard')
     },
