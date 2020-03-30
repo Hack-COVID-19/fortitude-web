@@ -1,6 +1,6 @@
 {
   "private": true,
-  "homepage": "https://www.fortitudehealth.com/",
+  "homepage": "https://www.fortitudehealth.org/",
   "scripts": {
     "start": "react-scripts start",
     "now-start": "serve -s ./build",
