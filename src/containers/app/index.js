@@ -16,6 +16,9 @@ import { push } from 'connected-react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { getMarketData } from '../../modules/iexCloud'
+import Appointments from '../appointments';
+import AppointmentFeedback from '../appointmentfeedback';
+
 const stocks = _.map(companies.default, (company) => { return {title: company.Symbol, description: company.Name}})
 
 
@@ -44,6 +47,8 @@ const App = props => {
       <Route exact path="/calendly" component={Calendly} />
       <Route exact path="/onboard" component={Onboard} />
       <Route exact path="/login" component={Home} />
+      <Route exact path="/appointments/:id" component={Appointments} />
+      <Route exact path="/appointmentfeedback/:id" component={AppointmentFeedback} />
       <Route path="/stocks/:stockId" component={Stocks} />
     </Container>
 
