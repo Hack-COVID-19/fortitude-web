@@ -9,17 +9,20 @@ import { Header, Grid, Button } from 'semantic-ui-react'
 
 const Calendly = props => (
   <div>
-    <h1>Calendly</h1>
+    <h1>Appointment Planner</h1>
 
-    <h4>We use Calendly for appointment coordination.</h4>
+    {/* <h4>We use Calendly for appointment coordination.</h4> */}
+    <h4>Schedule and view recent appointments.</h4>
     <div className="fill">
-      <p>
+
+      <iframe width='100%' height='90%' src="https://master.d2hu6zuqjn9j6q.amplifyapp.com/"></iframe> 
+      {/* <p>
         Create an account with Calendly for scheduling virtual appointments with patients. 
       </p>
       <p>
         Set up a new meeting type, and add Zoom or Google Meet so that each meeting will be created with a video call so patients are able to recieve assistance remotely and continue praticing social distancing.
       </p>
-      <span>👉 <a target="_blank" href='https://calendly.com/'>https://calendly.com/</a></span>
+      <span>👉 <a target="_blank" href='https://calendly.com/'>https://calendly.com/</a></span> */}
     
     </div>
       <Grid>
