@@ -5,7 +5,26 @@ import { connect } from 'react-redux'
 import {
   setData
 } from '../../modules/iexCloud'
-import { Header, Grid, Button } from 'semantic-ui-react'
+import { Card, Form, TextArea, Grid, Button, Modal, Header, Icon } from 'semantic-ui-react'
+
+const items = [
+  {
+    header: 'Quick Update',
+    meta: '⏰ 15 mins',
+  },
+  {
+    header: 'Consultation',
+    meta: '⏰ 30 mins',
+  },
+  {
+    header: 'Session',
+    meta: '⏰ 60 mins',
+  },
+  {
+    header: 'Urgent Help',
+    meta: '⏰ 0-90 mins',
+  },
+]
 
 const Patient = props => (
   <div>
@@ -15,14 +34,13 @@ const Patient = props => (
     <h4>Schedule and view recent appointments.</h4>
     <div className="fill">
 
-      <iframe width='100%' height='90%' src="https://master.d2hu6zuqjn9j6q.amplifyapp.com/patients"></iframe>
-      {/* <p>
-        Create an account with Calendly for scheduling virtual appointments with patients. 
-      </p>
-      <p>
-        Set up a new meeting type, and add Zoom or Google Meet so that each meeting will be created with a video call so patients are able to recieve assistance remotely and continue praticing social distancing.
-      </p>
-      <span>👉 <a target="_blank" href='https://calendly.com/'>https://calendly.com/</a></span> */}
+      
+    <Form>
+      <TextArea placeholder='How are you feeling?' />
+    </Form>
+
+    <br />
+    <Card.Group items={items} />
     
     </div>
       <Grid>
@@ -31,7 +49,22 @@ const Patient = props => (
             <Button onClick={props.goBack}>Back</Button>
           </Grid.Column>
           <Grid.Column floated='right'>
-            <Button onClick={props.changePage}>Add Patient</Button>
+            <Modal trigger={<Button>Schedule</Button>} basic size='small'>
+              <Header icon='calendar check outline' content='Confirm Appointment' />
+              <Modal.Content>
+                <p>
+                  Are you sure you want to confirm this virtual apointment?
+                </p>
+              </Modal.Content>
+              <Modal.Actions>
+                <Button basic color='red' inverted onClick={props.goBack}>
+                  <Icon name='remove' /> No
+                </Button>
+                <Button color='green' inverted onClick={props.goBack}>
+                  <Icon name='checkmark' /> Yes
+                </Button>
+              </Modal.Actions>
+            </Modal>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -45,7 +78,6 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
-      changePage: () => push('/onboard'),
       goBack: () => push('/')
     },
     dispatch
