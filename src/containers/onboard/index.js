@@ -12,7 +12,7 @@ const Onboard = props => (
     <h1>Add New Patient</h1>
     <h4>Use the form below to add a new patient.</h4>
 
-    <div className="fill body">
+    <div className="fill">
       <p>
         If a patient is no longer able to recieve housecare treatment because of COVID-19 restrictions, you can ask them if they would like to continue recieving treatment remotely.
       </p>

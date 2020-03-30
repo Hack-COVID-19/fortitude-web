@@ -12,7 +12,7 @@ const Home = props => (
     <h1>Home</h1>
     <h4>Welcome to Fortitude Health.</h4>
     
-    <div className="fill body">
+    <div className="fill">
       <Message>
         <Message.Header>Site Features</Message.Header>
           <Message.List>

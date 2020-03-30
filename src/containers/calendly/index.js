@@ -12,7 +12,7 @@ const Calendly = props => (
     <h1>Calendly</h1>
 
     <h4>We use Calendly for appointment coordination.</h4>
-    <div className="fill body">
+    <div className="fill">
       <p>
         Create an account with Calendly for scheduling virtual appointments with patients. 
       </p>
@@ -21,7 +21,7 @@ const Calendly = props => (
       </p>
       <span>👉 <a target="_blank" href='https://calendly.com/'>https://calendly.com/</a></span>
     
-      </div>
+    </div>
       <Grid>
         <Grid.Row columns={4}>
           <Grid.Column floated='left'>
