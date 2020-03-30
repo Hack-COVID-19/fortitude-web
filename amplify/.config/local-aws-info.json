@@ -1,9 +1,4 @@
 {
-    "sampledev": {
-        "configLevel": "project",
-        "useProfile": true,
-        "profileName": "default"
-    },
     "dev": {
         "configLevel": "project",
         "useProfile": true,

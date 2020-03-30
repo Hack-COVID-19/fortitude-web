@@ -5,14 +5,14 @@ import { connect } from 'react-redux'
 import {
   setData
 } from '../../modules/iexCloud'
-import { Message } from 'semantic-ui-react'
+import { Message, Header, Grid, Button } from 'semantic-ui-react'
 
 const Home = props => (
   <div>
     <h1>Home</h1>
     <h4>Welcome to Fortitude Health.</h4>
     
-    <div className="fill body">
+    <div className="fill">
       <Message>
         <Message.Header>Site Features</Message.Header>
           <Message.List>
@@ -23,7 +23,17 @@ const Home = props => (
             <Message.Item>HIPAA Compliant</Message.Item>
           </Message.List>
       </Message>
+      <Header as='h2' textAlign='center'>
+        Ready to get started?
+      </Header>
     </div>
+      <Grid>
+        <Grid.Row columns={4}>
+          <Grid.Column floated='right'>
+            <Button onClick={props.changePage}>Set Schedule</Button>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
   </div>
 )
 
@@ -34,7 +44,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setData,
-      changePage: () => push('/about-us')
+      changePage: () => push('/calendly')
     },
     dispatch
   )

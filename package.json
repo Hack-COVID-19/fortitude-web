@@ -1,6 +1,6 @@
 {
   "private": true,
-  "homepage": "http://r0zar.github.io/stock-info-app-web",
+  "homepage": "https://www.fortitudehealth.org/",
   "scripts": {
     "start": "react-scripts start",
     "now-start": "serve -s ./build",

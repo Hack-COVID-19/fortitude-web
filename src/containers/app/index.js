@@ -5,6 +5,8 @@ import { listTodos } from '../../graphql/queries'
 import { withAuthenticator } from 'aws-amplify-react'
 import { Route } from 'react-router-dom'
 import Home from '../home'
+import Calendly from '../calendly'
+import Onboard from '../onboard'
 import Stocks from '../stocks'
 import { Container, Divider, Grid, Header, Image, List, Menu, Segment } from 'semantic-ui-react'
 import StockSearch from './search'
@@ -42,6 +44,8 @@ const App = props => {
     <Container text style={{ marginTop: '7em' }}>
       <Route exact path="/" component={Home} />
       <Route exact path="/home" component={Home} />
+      <Route exact path="/calendly" component={Calendly} />
+      <Route exact path="/onboard" component={Onboard} />
       <Route exact path="/login" component={Home} />
       <Route exact path="/appointments/:id" component={Appointments} />
       <Route exact path="/appointmentfeedback/:id" component={AppointmentFeedback} />
